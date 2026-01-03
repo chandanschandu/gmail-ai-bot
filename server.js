@@ -1421,7 +1421,8 @@ setInterval(async () => {
 }, 60000);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+
+app.listen(PORT, '0.0.0.0', () => {
   const baseUrl = process.env.RAILWAY_PUBLIC_DOMAIN 
     ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}` 
     : `http://localhost:${PORT}`;
@@ -1432,4 +1433,6 @@ app.listen(PORT, () => {
   console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
   console.log('===========================================\n');
 });
+
+
 
